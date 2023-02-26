@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: modkaffes.com
-Token: 0e6185d4f30a3c92b12e9ff185586a69b7059a4b24af70124f47fc8694d50f83
