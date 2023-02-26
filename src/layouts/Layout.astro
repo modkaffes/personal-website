@@ -1,0 +1,32 @@
+---
+const {
+  title = "Modestos Kaffes - Creative Software Engineer",
+  description = "Hi, I’m Modestos Kaffes, a software engineer who cares about technology, startups, music, design and photography, in no particular order.",
+  image = "assets/banner.png",
+} = Astro.props;
+
+const url = new URL(Astro.url).href;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${url}${image}`} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="robots" content="follow, index" />
+  </head>
+  <body class="antialiased py-12 md:py-36 bg-white dark:bg-zinc-900">
+    <main class="px-6 lg:px-0 mx-auto max-w-lg flex flex-col gap-10 sm:gap-14">
+      <slot />
+    </main>
+  </body>
+</html>

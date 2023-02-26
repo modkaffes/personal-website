@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Arc",
+    "url": "https://arc.net/",
+    "img": "arc.png"
+  },
+  {
+    "name": "Visual Studio Code",
+    "url": "https://code.visualstudio.com/",
+    "img": "vscode.png"
+  },
+  {
+    "name": "Fork",
+    "url": "https://fork.dev",
+    "img": "fork.png"
+  },
+  {
+    "name": "Lens",
+    "url": "https://k8slens.dev/",
+    "img": "lens.png"
+  },
+  {
+    "name": "RunJS",
+    "url": "https://runjs.app/",
+    "img": "runjs.png"
+  },
+
+  {
+    "name": "Postman",
+    "url": "https://postman.com",
+    "img": "postman.png"
+  },
+  {
+    "name": "Figma",
+    "url": "https://figma.com",
+    "img": "figma.png"
+  }
+]

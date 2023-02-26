@@ -1,0 +1,54 @@
+[
+  {
+    "company": {
+      "name": "Credora",
+      "url": "https://credora.io",
+      "img": "credora.svg"
+    },
+    "roles": [
+      {
+        "title": "IC Frontend Engineer",
+        "date": "2022 - Present"
+      }
+    ]
+  },
+  {
+    "company": {
+      "name": "21.co",
+      "url": "https://21.co",
+      "img": "21co.svg"
+    },
+    "roles": [
+      {
+        "title": "Websites Team Lead",
+        "date": "2021 - 2022"
+      }
+    ]
+  },
+  {
+    "company": {
+      "name": "Cambrian Technologies",
+      "url": "http://cambriantechnologies.com/",
+      "img": "cambrian.svg"
+    },
+    "roles": [
+      {
+        "title": "Lead Frontend Engineer & Designer",
+        "date": "2020 - 2021"
+      }
+    ]
+  },
+  {
+    "company": {
+      "name": "Workable",
+      "url": "https://workable.com",
+      "img": "workable.svg"
+    },
+    "roles": [
+      {
+        "title": "Senior Software Engineer",
+        "date": "2016 - 2019"
+      }
+    ]
+  }
+]
