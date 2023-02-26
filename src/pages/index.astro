@@ -1,0 +1,90 @@
+---
+import Layout from "@layouts/Layout.astro";
+import LinkImg from "@components/LinkImg.astro";
+import links from "@data/links.json";
+import jobs from "@data/jobs.json";
+import apps from "@data/apps.json";
+---
+
+<Layout>
+  <section>
+    <header>
+      <h1
+        class="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-800 dark:text-zinc-100"
+      >
+        Modestos Kaffes
+      </h1>
+      <h2 class="mt-2 text-zinc-700 dark:text-zinc-300">
+        Creative Software Engineer
+      </h2>
+      <p class="mt-4 leading-relaxed text-zinc-500 dark:text-zinc-400">
+        I’m a software engineer specializing in the frontend, with strong design
+        background and an eye for detail. My perspective is to build for the
+        user, iterate fast and deliver easy-to-use products.
+      </p>
+    </header>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+      Contact me
+    </h2>
+    <ul class="flex gap-6 mt-4">
+      {
+        links.map(({ name, url, img }) => (
+          <li>
+            <LinkImg name={name} url={url} img={img} />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+      Work Experience
+    </h2>
+    <ol class="mt-4 flex flex-col gap-4">
+      {
+        jobs.map(({ company, roles }) => (
+          <li class="flex gap-4 items-center">
+            <LinkImg url={company.url} img={company.img} />
+            <div class="flex-1">
+              <p class="text-zinc-800 dark:text-zinc-100 text-sm">
+                {company.name}
+              </p>
+              {roles.map((role) => (
+                <div class="flex flex-col md:flex-row justify-between text-zinc-500 dark:text-zinc-400 text-sm">
+                  <span>{role.title}</span>
+                  <span>{role.date}</span>
+                </div>
+              ))}
+            </div>
+          </li>
+        ))
+      }
+    </ol>
+    <a
+      href="https://linkedin.com/in/modkaffes"
+      target="_blank"
+      class="inline-flex gap-1 text-sm mt-4 underline text-zinc-500 dark:text-zinc-400 focus:text-sky-700 hover:text-sky-700 dark:focus:text-sky-400 dark:hover:text-sky-400"
+    >
+      See more on LinkedIn
+    </a>
+  </section>
+
+  <section>
+    <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+      Currently in dock
+    </h2>
+    <ul class="mt-4 flex">
+      {
+        apps.map(({ name, url, img }) => (
+          <li>
+            <LinkImg name={name} url={url} img={img} size="lg" scale />
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</Layout>

@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/modkaffes
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://modkaffes.com
+  * I am modkaffes (https://keybase.io/modkaffes) on keybase.
+  * I have a public key ASAu2w760eS-CNPzfImjYcO86KpJyxU1sP9NM1pLT-5fxwo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120a46182f11a35730cff31777f3b98cb4ea6c39a47ed9be3d5a556278b0f84e8ee0a",
+      "host": "keybase.io",
+      "kid": "01202edb0efad1e4be08d3f37c89a361c3bce8aa49cb1535b0ff4d335a4b4fee5fc70a",
+      "uid": "429f04ca3d54be7378cc05d6118a3c19",
+      "username": "modkaffes"
+    },
+    "merkle_root": {
+      "ctime": 1566640943,
+      "hash": "eb9d6ffea5fda55a7c557c8beecca924627a51e6c5953976cb489af3d7ee4a497b008ff7f90d3a0186fc645de08e9d7761d0b8326f77e4af4fe3e5dc5e1189ca",
+      "hash_meta": "bd9c2b826de52a9c98d94e016b33da0ee9c410dd2c18372801ee3c6f40ab3324",
+      "seqno": 6089136
+    },
+    "service": {
+      "entropy": "T4m6IcNBOxnjNulhuyMZrZ48",
+      "hostname": "modkaffes.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "4.3.2"
+  },
+  "ctime": 1566640962,
+  "expire_in": 504576000,
+  "prev": "8c7f5afe01c1051edc7ae90dcdfe8ec1e10039f9ff26945380fcdeda4195b3c8",
+  "seqno": 44,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgLtsO+tHkvgjT83yJo2HDvOiqScsVNbD/TTNaS0/uX8cKp3BheWxvYWTESpcCLMQgjH9a/gHBBR7ceukNzf6OweEAOfn/JpRTgPze2kGVs8jEIGseEsRh/WVCSQ1BNrRd7nPJRs2VfHn8efarafXCAoOIAgHCo3NpZ8RAxaAFVWixi5h6ddWUE4hdy+mGM3oJT69phNzFxMWXra5lrKktnc9yP1TogCtk6S4OvSb5tTiYb2nYxpB6VdiQCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIEUsXNH0trtI/7u6OcNI4flzIFi3EPnFJGy+3aw8MQX1o3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/modkaffes
+
+==================================================================
