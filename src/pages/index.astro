@@ -7,7 +7,7 @@ import apps from "@data/apps.json";
 ---
 
 <Layout>
-  <section>
+  <section class="px-6 lg:px-0">
     <header>
       <h1
         class="text-3xl font-bold tracking-tight sm:text-4xl text-zinc-800 dark:text-zinc-100"
@@ -25,7 +25,7 @@ import apps from "@data/apps.json";
     </header>
   </section>
 
-  <section>
+  <section class="px-6 lg:px-0">
     <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
       Contact me
     </h2>
@@ -40,7 +40,7 @@ import apps from "@data/apps.json";
     </ul>
   </section>
 
-  <section>
+  <section class="px-6 lg:px-0">
     <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
       Work Experience
     </h2>
@@ -74,17 +74,32 @@ import apps from "@data/apps.json";
   </section>
 
   <section>
-    <h2 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">
+    <h2
+      class="text-xl font-semibold text-zinc-800 dark:text-zinc-100 px-6 lg:px-0"
+    >
       Currently in dock
     </h2>
-    <ul class="mt-4 flex">
-      {
-        apps.map(({ name, url, img }) => (
-          <li>
-            <LinkImg name={name} url={url} img={img} size="lg" scale />
-          </li>
-        ))
-      }
-    </ul>
+    <div class="scrollbar-hide overflow-x-auto pt-6 -translate-y-6">
+      <ul class="mt-4 flex mx-6 lg:mx-0">
+        {
+          apps.map(({ name, url, img }) => (
+            <li>
+              <LinkImg name={name} url={url} img={img} size="lg" scale />
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </section>
 </Layout>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
