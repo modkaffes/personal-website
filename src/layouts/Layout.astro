@@ -23,6 +23,18 @@ const url = new URL(Astro.url).href;
     <meta property="og:image" content={`${url}${image}`} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-WQPCCYYRXM"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-WQPCCYYRXM");
+    </script>
   </head>
   <body class="antialiased py-12 md:py-36 bg-white dark:bg-zinc-900">
     <main class="mx-auto max-w-lg flex flex-col gap-10 sm:gap-14">
