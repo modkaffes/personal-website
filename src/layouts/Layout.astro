@@ -2,10 +2,11 @@
 const {
   title = "Modestos Kaffes - Creative Software Engineer",
   description = "Hi, I’m Modestos Kaffes, a software engineer who cares about technology, startups, music, design and photography, in no particular order.",
-  image = "assets/banner.png",
+  image = "/assets/banner.png",
 } = Astro.props;
 
-const url = new URL(Astro.url).href;
+const baseUrl = Astro.site;
+const imageUrl = new URL(image, baseUrl);
 ---
 
 <html lang="en">
@@ -17,10 +18,10 @@ const url = new URL(Astro.url).href;
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content={url} />
+    <meta property="og:url" content={baseUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
-    <meta property="og:image" content={`${url}${image}`} />
+    <meta property="og:image" content={imageUrl} />
     <meta name="generator" content={Astro.generator} />
     <meta name="robots" content="follow, index" />
     <script
