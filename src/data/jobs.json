@@ -1,6 +1,19 @@
 [
   {
     "company": {
+      "name": "LeoVegas",
+      "url": "https://leovegas.com",
+      "img": "leovegas.svg"
+    },
+    "roles": [
+      {
+        "title": "Senior JavaScript Engineer",
+        "date": "2023 - Present"
+      }
+    ]
+  },
+  {
+    "company": {
       "name": "Credora",
       "url": "https://credora.io",
       "img": "credora.svg"
@@ -8,7 +21,7 @@
     "roles": [
       {
         "title": "IC Frontend Engineer",
-        "date": "2022 - Present"
+        "date": "2022 - 2023"
       }
     ]
   },
