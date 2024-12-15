@@ -6,7 +6,7 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "format": "prettier -w --plugin-search-dir=. '**/*.{js,jsx,md,mdx,cjs,ts,tsx,astro,svelte,vue,html}'"
+    "format": "prettier -w --plugin-search-dir . '**/*.{js,jsx,md,mdx,cjs,ts,tsx,astro,svelte,vue,html}'"
   },
   "dependencies": {
     "tailwindcss": "^3.4.16"
