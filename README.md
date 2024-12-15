@@ -2,7 +2,7 @@
 
 Minimal personal website
 
-![modkaffes com](https://user-images.githubusercontent.com/1829897/221628313-bf3d8c16-9f0f-4d87-867c-2c7b2f039349.png)
+![modkaffes com](https://github.com/user-attachments/assets/efbda516-95cf-4e9a-82b0-bd67649f868d)
 
 ## Tech used
 
