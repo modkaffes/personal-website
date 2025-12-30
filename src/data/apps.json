@@ -1,13 +1,23 @@
 [
   {
-    "name": "Arc",
-    "url": "https://arc.net/",
-    "img": "arc.png"
+    "name": "Figma",
+    "url": "https://figma.com",
+    "img": "figma.png"
   },
   {
-    "name": "Visual Studio Code",
-    "url": "https://code.visualstudio.com/",
-    "img": "vscode.png"
+    "name": "Antigravity",
+    "url": "https://antigravity.google",
+    "img": "antigravity.png"
+  },
+  {
+    "name": "Claude Code",
+    "url": "https://claude.com/product/claude-code",
+    "img": "claude.png"
+  },
+  {
+    "name": "Gemini",
+    "url": "https://gemini.google.com/",
+    "img": "gemini.png"
   },
   {
     "name": "Fork",
@@ -15,24 +25,8 @@
     "img": "fork.png"
   },
   {
-    "name": "Lens",
-    "url": "https://k8slens.dev/",
-    "img": "lens.png"
-  },
-  {
-    "name": "RunJS",
-    "url": "https://runjs.app/",
-    "img": "runjs.png"
-  },
-
-  {
-    "name": "Postman",
-    "url": "https://postman.com",
-    "img": "postman.png"
-  },
-  {
-    "name": "Figma",
-    "url": "https://figma.com",
-    "img": "figma.png"
+    "name": "OpenLens",
+    "url": "https://github.com/MuhammedKal662/OpenLens",
+    "img": "openlens.png"
   }
 ]
