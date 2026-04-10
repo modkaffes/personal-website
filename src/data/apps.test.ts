@@ -11,8 +11,7 @@ describe("apps.json", () => {
   apps.forEach((app, index) => {
     describe(`app[${index}] — ${app.name ?? index}`, () => {
       it("has a non-empty name string", () => {
-        expect(typeof app.name).toBe("string");
-        expect(app.name.trim().length).toBeGreaterThan(0);
+        expect(app.name).toMatch(/\S/);
       });
 
       it("has a valid url", () => {
@@ -21,8 +20,7 @@ describe("apps.json", () => {
       });
 
       it("has a non-empty img string", () => {
-        expect(typeof app.img).toBe("string");
-        expect(app.img.trim().length).toBeGreaterThan(0);
+        expect(app.img).toMatch(/\S/);
       });
 
       it("img references an svg or png file", () => {

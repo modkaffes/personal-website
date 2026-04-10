@@ -12,8 +12,7 @@ describe("jobs.json", () => {
     describe(`job[${index}] — ${job.company?.name ?? index}`, () => {
       describe("company", () => {
         it("has a non-empty name string", () => {
-          expect(typeof job.company.name).toBe("string");
-          expect(job.company.name.trim().length).toBeGreaterThan(0);
+          expect(job.company.name).toMatch(/\S/);
         });
 
         it("has a valid url", () => {
@@ -22,8 +21,7 @@ describe("jobs.json", () => {
         });
 
         it("has a non-empty img string", () => {
-          expect(typeof job.company.img).toBe("string");
-          expect(job.company.img.trim().length).toBeGreaterThan(0);
+          expect(job.company.img).toMatch(/\S/);
         });
 
         it("img references an svg or png file", () => {
@@ -40,13 +38,11 @@ describe("jobs.json", () => {
         job.roles.forEach((role, roleIndex) => {
           describe(`role[${roleIndex}] — ${role.title ?? roleIndex}`, () => {
             it("has a non-empty title string", () => {
-              expect(typeof role.title).toBe("string");
-              expect(role.title.trim().length).toBeGreaterThan(0);
+              expect(role.title).toMatch(/\S/);
             });
 
             it("has a non-empty date string", () => {
-              expect(typeof role.date).toBe("string");
-              expect(role.date.trim().length).toBeGreaterThan(0);
+              expect(role.date).toMatch(/\S/);
             });
 
             it("date matches expected year range format", () => {

@@ -11,8 +11,7 @@ describe("links.json", () => {
   links.forEach((link, index) => {
     describe(`link[${index}] — ${link.name ?? index}`, () => {
       it("has a non-empty name string", () => {
-        expect(typeof link.name).toBe("string");
-        expect(link.name.trim().length).toBeGreaterThan(0);
+        expect(link.name).toMatch(/\S/);
       });
 
       it("has a valid url", () => {
@@ -21,8 +20,7 @@ describe("links.json", () => {
       });
 
       it("has a non-empty img string", () => {
-        expect(typeof link.img).toBe("string");
-        expect(link.img.trim().length).toBeGreaterThan(0);
+        expect(link.img).toMatch(/\S/);
       });
 
       it("img references an svg or png file", () => {

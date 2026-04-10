@@ -1,7 +1,7 @@
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
 import tailwindcss from "@tailwindcss/vite";
-import { SITE_URL } from "./src/site-config.ts";
+import { SITE_URL } from "./src/site-config";
 
 // https://astro.build/config
 export default defineConfig({
