@@ -9,7 +9,7 @@ describe("links.json", () => {
   });
 
   links.forEach((link, index) => {
-    describe(`link[${index}] — ${link.name}`, () => {
+    describe(`link[${index}] — ${link.name ?? index}`, () => {
       it("has a non-empty name string", () => {
         expect(typeof link.name).toBe("string");
         expect(link.name.trim().length).toBeGreaterThan(0);

@@ -9,7 +9,7 @@ describe("apps.json", () => {
   });
 
   apps.forEach((app, index) => {
-    describe(`app[${index}] — ${app.name}`, () => {
+    describe(`app[${index}] — ${app.name ?? index}`, () => {
       it("has a non-empty name string", () => {
         expect(typeof app.name).toBe("string");
         expect(app.name.trim().length).toBeGreaterThan(0);

@@ -9,7 +9,7 @@ describe("jobs.json", () => {
   });
 
   jobs.forEach((job, index) => {
-    describe(`job[${index}] — ${job.company.name}`, () => {
+    describe(`job[${index}] — ${job.company?.name ?? index}`, () => {
       describe("company", () => {
         it("has a non-empty name string", () => {
           expect(typeof job.company.name).toBe("string");
@@ -38,7 +38,7 @@ describe("jobs.json", () => {
         });
 
         job.roles.forEach((role, roleIndex) => {
-          describe(`role[${roleIndex}] — ${role.title}`, () => {
+          describe(`role[${roleIndex}] — ${role.title ?? roleIndex}`, () => {
             it("has a non-empty title string", () => {
               expect(typeof role.title).toBe("string");
               expect(role.title.trim().length).toBeGreaterThan(0);

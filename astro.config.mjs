@@ -1,10 +1,11 @@
 import { defineConfig } from "astro/config";
 import partytown from "@astrojs/partytown";
 import tailwindcss from "@tailwindcss/vite";
+import { SITE_URL } from "./src/site-config.ts";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://modkaffes.com",
+  site: SITE_URL,
 
   integrations: [
     partytown({
