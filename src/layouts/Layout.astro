@@ -1,10 +1,11 @@
 ---
 import "src/styles/global.css";
+import { DEFAULT_META } from "../site-config";
 
 const {
-  title = "Modestos Kaffes - Creative Software Engineer",
-  description = "Hi, I’m Modestos Kaffes, a software engineer who cares about technology, startups, music, design and photography, in no particular order.",
-  image = "/assets/banner.png",
+  title = DEFAULT_META.title,
+  description = DEFAULT_META.description,
+  image = DEFAULT_META.image,
 } = Astro.props;
 
 const baseUrl = Astro.site;
