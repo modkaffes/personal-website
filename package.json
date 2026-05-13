@@ -9,8 +9,8 @@
     "format": "prettier -w --plugin-search-dir . '**/*.{js,jsx,md,mdx,cjs,ts,tsx,astro,svelte,vue,html}'"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.2",
-    "tailwindcss": "^4.2.2"
+    "@tailwindcss/vite": "^4.3.0",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@astrojs/partytown": "^2.1.7",
