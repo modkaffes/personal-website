@@ -5,19 +5,14 @@
     "img": "figma.png"
   },
   {
-    "name": "Antigravity",
-    "url": "https://antigravity.google",
-    "img": "antigravity.png"
-  },
-  {
     "name": "Claude Code",
     "url": "https://claude.com/product/claude-code",
     "img": "claude.png"
   },
   {
-    "name": "Gemini",
-    "url": "https://gemini.google.com/",
-    "img": "gemini.png"
+    "name": "Zed",
+    "url": "https://zed.dev",
+    "img": "zed.png"
   },
   {
     "name": "Fork",
