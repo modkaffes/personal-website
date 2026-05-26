@@ -1,6 +1,6 @@
 ---
 import "src/styles/global.css";
-import { DEFAULT_META } from "../site-config";
+import { DEFAULT_META, resolveImageUrl } from "../site-config";
 
 const {
   title = DEFAULT_META.title,
@@ -9,7 +9,7 @@ const {
 } = Astro.props;
 
 const baseUrl = Astro.site;
-const imageUrl = new URL(image, baseUrl);
+const imageUrl = resolveImageUrl(image, baseUrl);
 ---
 
 <html lang="en">

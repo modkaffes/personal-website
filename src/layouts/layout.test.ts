@@ -1,45 +1,51 @@
 import { describe, it, expect } from "vitest";
-import { SITE_URL, DEFAULT_META } from "../site-config";
+import { SITE_URL, DEFAULT_META, resolveImageUrl } from "../site-config";
 
-describe("Layout — OG image URL construction", () => {
-  it("resolves a root-relative image path against the base URL", () => {
-    const image = "/assets/banner.png";
-    const imageUrl = new URL(image, SITE_URL);
-    expect(imageUrl.href).toBe(`${SITE_URL}/assets/banner.png`);
+describe("resolveImageUrl — OG image URL construction", () => {
+  it("resolves a root-relative image path against the default base URL", () => {
+    expect(resolveImageUrl("/assets/banner.png")).toBe(
+      `${SITE_URL}/assets/banner.png`,
+    );
   });
 
   it("resolves the default banner path correctly", () => {
-    const image = "/assets/banner.png";
-    const imageUrl = new URL(image, SITE_URL);
-    expect(imageUrl.hostname).toBe(new URL(SITE_URL).hostname);
-    expect(imageUrl.pathname).toBe("/assets/banner.png");
+    const url = new URL(resolveImageUrl(DEFAULT_META.image));
+    expect(url.hostname).toBe(new URL(SITE_URL).hostname);
+    expect(url.pathname).toBe("/assets/banner.png");
   });
 
   it("resolves a custom image path correctly", () => {
-    const image = "/assets/custom.png";
-    const imageUrl = new URL(image, SITE_URL);
-    expect(imageUrl.href).toBe(`${SITE_URL}/assets/custom.png`);
+    expect(resolveImageUrl("/assets/custom.png")).toBe(
+      `${SITE_URL}/assets/custom.png`,
+    );
   });
 
   it("preserves an already-absolute image URL", () => {
-    const image = "https://cdn.example.com/image.png";
-    const imageUrl = new URL(image, SITE_URL);
-    expect(imageUrl.href).toBe("https://cdn.example.com/image.png");
+    expect(resolveImageUrl("https://cdn.example.com/image.png")).toBe(
+      "https://cdn.example.com/image.png",
+    );
   });
 
-  it("uses https protocol for the base URL", () => {
-    const imageUrl = new URL("/assets/banner.png", SITE_URL);
-    expect(imageUrl.protocol).toBe("https:");
+  it("resolves against an explicitly provided base URL", () => {
+    expect(
+      resolveImageUrl("/assets/banner.png", "https://staging.example.com"),
+    ).toBe("https://staging.example.com/assets/banner.png");
+  });
+
+  it("uses https protocol for the default base URL", () => {
+    expect(new URL(resolveImageUrl("/assets/banner.png")).protocol).toBe(
+      "https:",
+    );
   });
 });
 
 describe("Layout — default prop values", () => {
   it("default title is non-empty", () => {
-    expect(DEFAULT_META.title.trim().length).toBeGreaterThan(0);
+    expect(DEFAULT_META.title).toMatch(/\S/);
   });
 
   it("default description is non-empty", () => {
-    expect(DEFAULT_META.description.trim().length).toBeGreaterThan(0);
+    expect(DEFAULT_META.description).toMatch(/\S/);
   });
 
   it("default image starts with a forward slash", () => {
