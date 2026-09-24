@@ -17,18 +17,18 @@ updates:
       prefix: "chore"
       include: "scope"
     groups:
-      astro:
+      # Bundle minor/patch npm updates into a single weekly PR;
+      # majors still get their own PR each
+      npm-dependencies:
         patterns:
-          - "astro"
-          - "@astrojs/*"
-      tailwindcss:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+      npm-security:
+        applies-to: security-updates
         patterns:
-          - "tailwindcss"
-          - "@tailwindcss/*"
-      prettier:
-        patterns:
-          - "prettier"
-          - "prettier-plugin-*"
+          - "*"
 
   # Keep GitHub Actions up to date
   - package-ecosystem: "github-actions"
@@ -45,3 +45,7 @@ updates:
     commit-message:
       prefix: "ci"
       include: "scope"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
